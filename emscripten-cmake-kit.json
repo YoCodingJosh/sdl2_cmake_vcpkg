@@ -1,0 +1,9 @@
+[
+  {
+    "name": "Emscripten on POSIX systems",
+    "compilers": {
+      "C": "~/emsdk/upstream/emscripten/emcc",
+      "CXX": "~/emsdk/upstream/emscripten/em++"
+    }
+  }
+]

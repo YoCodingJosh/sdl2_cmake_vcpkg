@@ -1,0 +1,10 @@
+{
+    "name": "awesome-game",
+    "version-string": "0.0.1",
+    "dependencies": [
+      { "name": "sdl2", "platform": "!emscripten" },
+      { "name": "sdl2-ttf", "platform": "!emscripten" },
+      { "name": "sdl2-gfx", "platform": "!emscripten" },
+      { "name": "sdl2-image", "platform": "!emscripten" }
+    ]
+  }
