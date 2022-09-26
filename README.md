@@ -6,7 +6,8 @@ The code for our "game" is a very basic "Hello World!" that does the following:
 * Initializes SDL2
 * Loads an image
 * Renders the image
-* Handles input (just the `SDL_WINDOWEVENT_CLOSE` event)
+* Plays a sound on space key or mouse click
+* Handles input
 
 Essentially, just the basics to show that SDL2 is working correctly.
 
