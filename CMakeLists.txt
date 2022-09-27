@@ -61,10 +61,10 @@ if (EMSCRIPTEN)
 elseif (APPLE)
     # This is for macOS
     # TODO: Handle iOS.
-    target_link_libraries(AwesomeGame PRIVATE SDL2::SDL2 SDL2::SDL2main SDL2_ttf::SDL2_ttf-static SDL2::SDL2_gfx SDL2::SDL2_image SDL2_mixer::SDL2_mixer "-framework CoreFoundation")
+    target_link_libraries(AwesomeGame PRIVATE SDL2::SDL2 SDL2::SDL2main SDL2_ttf::SDL2_ttf-static SDL2::SDL2_gfx SDL2::SDL2_image SDL2_mixer::SDL2_mixer-static "-framework CoreFoundation")
     set_target_properties(AwesomeGame PROPERTIES LINK_FLAGS "-Wl,-F/Library/Frameworks")
 elseif (WIN32)
     target_link_libraries(AwesomeGame PRIVATE SDL2::SDL2 SDL2::SDL2main SDL2_ttf::SDL2_ttf SDL2::SDL2_gfx SDL2::SDL2_image SDL2_mixer::SDL2_mixer "Shlwapi.lib")
 elseif (LINUX)
-    target_link_libraries(AwesomeGame PRIVATE SDL2::SDL2 SDL2::SDL2main SDL2_ttf::SDL2_ttf SDL2::SDL2_gfx SDL2::SDL2_image SDL2_mixer::SDL2_mixer)
+    target_link_libraries(AwesomeGame PRIVATE SDL2::SDL2 SDL2::SDL2main SDL2_ttf::SDL2_ttf-static SDL2::SDL2_gfx SDL2::SDL2_image SDL2_mixer::SDL2_mixer-static)
 endif ()
