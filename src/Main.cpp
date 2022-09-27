@@ -50,8 +50,14 @@ inline void processFrame() {
 
 int main(int argc, char* argv[])
 {
+    int sdlInitFlags = SDL_INIT_EVERYTHING;
+
+#if __EMSCRIPTEN__
+    sdlInitFlags &= ~(SDL_INIT_TIMER | SDL_INIT_HAPTIC);
+#endif
+
     // Initialize SDL, SDL_image, and SDL_mixer
-    if (SDL_Init(SDL_INIT_EVERYTHING) != 0)
+    if (SDL_Init(sdlInitFlags) != 0)
     {
         SDL_Log("Unable to initialize SDL: %s", SDL_GetError());
         return 1;
